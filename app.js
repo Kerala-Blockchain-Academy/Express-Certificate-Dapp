@@ -3,16 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var MyContractJSON =require(path.join(__dirname, 'build/contracts/certi.json'))
-Web3 = require("web3");
+var { abi, networks } = require(path.join(__dirname, 'build/contracts/Certi.json'))
+const Web3 = require("web3");
 
 var indexRouter = require('./routes/index');
-accountAddress = "0xE9232b7c35F49EbDE5db59eb9dd84938ab828A51";
-const web3 = new Web3('http://localhost:8545');
-const contractAddress = MyContractJSON.networks['5777'].address;
-const contractAbi = MyContractJSON.abi;
 
-MyContract = new web3.eth.Contract(contractAbi, contractAddress);
+const web3 = new Web3('http://localhost:8545');
+const contractAddress = networks['5777'].address;
+accountAddress = "0x9C77B8325D5892514801c97CBa7cf21cf38bA5A8";
+MyContract = new web3.eth.Contract(abi, contractAddress);
 
 var app = express();
 
@@ -29,12 +28,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

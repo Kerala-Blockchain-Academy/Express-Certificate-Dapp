@@ -27,7 +27,7 @@
         <form id="needs-validation" class="<%= formClass %>" action="/issue" method="POST">
             <div class="form-group">
                 <label for="courseName">Select Course *</label>
-                <select class="form-control" name="courseName" id="courseName">
+                <select class="form-control" name="courseName">
                     <option>Certified Blockchain Associate</option>
                     <option>Certified Ethereum Developer</option>
                     <option>Blockchain Foundation</option>
@@ -37,17 +37,15 @@
 
             <div class="form-group">
                 <label for="certificateID">Certificate ID *</label>
-                <input type="text" class="form-control" name="certificateID" id="certificateID"
-                    placeholder="Certificate ID" required>
+                <input type="text" class="form-control" name="certificateID" placeholder="Certificate ID" required>
             </div>
             <div class="form-group">
                 <label for="candidateName">Candidate name *</label>
-                <input type="text" class="form-control" name="candidateName" id="candidateName" placeholder="Name"
-                    required>
+                <input type="text" class="form-control" name="candidateName" placeholder="Name" required>
             </div>
             <div class="form-group">
                 <label for="grade">Select Grade *</label>
-                <select class="form-control" id="grade" name="grade" id="grade">
+                <select class="form-control" name="grade">
                     <option>S</option>
                     <option>A</option>
                     <option>B</option>
@@ -56,7 +54,7 @@
             </div>
             <div class="form-group">
                 <label for="date">Issue Date *</label>
-                <input type="date" class="form-control" id="date" name="date" required>
+                <input type="date" class="form-control" name="date" required>
             </div>
             <button class="btn btn-info" type="submit">Issue Certificate</button>
         </form>

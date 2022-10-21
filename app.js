@@ -3,15 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var { abi, networks } = require(path.join(__dirname, 'build/contracts/Certi.json'))
-const Web3 = require("web3");
+
+const Web3 = require('web3');
+const web3 = new Web3('http://localhost:8545');
+let { abi } = require('./artifacts/contracts/Certi.sol/Certi.json');
+let { deployer, address } = require('./details.json');
+MyContract = new web3.eth.Contract(abi, address);
+AccountAddress = deployer;
 
 var indexRouter = require('./routes/index');
-
-const web3 = new Web3('http://localhost:8545');
-const contractAddress = networks['5777'].address;
-accountAddress = "0x9C77B8325D5892514801c97CBa7cf21cf38bA5A8";
-MyContract = new web3.eth.Contract(abi, contractAddress);
 
 var app = express();
 

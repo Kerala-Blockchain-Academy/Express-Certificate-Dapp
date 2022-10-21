@@ -21,8 +21,8 @@
     <br />
     <div class="entry-form">
         <h3>Issue New Certificate</h3>
-        <p class="form-success bg-success <%= messageClass %>">
-            Certificate issued successfully. Number is <%= certificateID %>
+        <p class="form-success bg-success <%= messageClass %>" style="color: #f2f2f2;">
+            Certificate issued successfully for ID: <%= certificateID %>.
         </p>
         <form id="needs-validation" class="<%= formClass %>" action="/issue" method="POST">
             <div class="form-group">
@@ -34,7 +34,6 @@
                     <option>Ethereum Fundamentals</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="certificateID">Certificate ID *</label>
                 <input type="text" class="form-control" name="certificateID" placeholder="Certificate ID" required>

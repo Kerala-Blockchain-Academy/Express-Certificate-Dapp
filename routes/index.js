@@ -18,9 +18,9 @@ router.get('/issue', function (req, res, next) {
 router.post('/issue', function (req, res, next) {
   let data = req.body;
   console.log(data);
-
+  
   MyContract.methods.newCertificate(data.certificateID, data.courseName, data.candidateName, data.grade, data.date)
-    .send({ from: accountAddress, gasLimit: "927000" })
+    .send({ from: AccountAddress, gasLimit: "927000" })
     .then((txn) => {
       console.log(txn);
       res.render('issueCertificate', { formClass: 'hidden', messageClass: '', certificateID: data.certificateID })

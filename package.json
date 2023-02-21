@@ -1,23 +1,26 @@
 {
   "name": "express-certificate-dapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./src/bin/server.js",
+    "start": "node ./src/bin/server.js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" --fix"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "web3": "^1.8.0"
+    "chalk": "^5.2.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "web3": "^1.8.2"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.12.0",
-    "nodemon": "^2.0.20"
-  }
+    "eslint": "^8.34.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  },
+  "type": "module"
 }

@@ -2,7 +2,6 @@
 
 Simple Certificate Dapp.
 
-
 ## 🛠 Built With
 
 <div align="left">
@@ -14,10 +13,9 @@ Simple Certificate Dapp.
 <a href="https://trufflesuite.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/truffle.svg" width="36" height="36" alt="Truffle" /></a>
 </div>
 
-
 ## ⚙️ Run Locally
 
-Make sure to have a blockchain simulation (ganache/geth/foundry etc.) running on your port 8545. 
+Make sure to have a blockchain simulation (ganache/geth/foundry etc.) running on your port 8545.
 
 Clone the project
 
@@ -61,9 +59,6 @@ Start the application
 npm run dev
 ```
 
-
 ## License
 
 Distributed under the MIT License.
-
-
